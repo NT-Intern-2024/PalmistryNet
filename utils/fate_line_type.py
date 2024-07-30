@@ -30,7 +30,7 @@ def fate_line_type(coloring_path, compare_path, output_path = False, print_color
     for part, color in zip([tail_part, tip_part], [(0, 255, 0), (255, 0, 0)]): 
         for y, x in part:
             img_colorized[y, x] = color
-    
+
     # For display colorized img
     if print_coloring == True:
         if output_path == False:
@@ -88,16 +88,16 @@ count_case1, count_case2 = fate_line_type(coloring_path, compare_path, output_pa
 
 # Classify type of fate line base on intersect points
 if count_case1 >= 1:
-    print(f'case 1 tip(blue) = {count_case1} mid(green) = {count_case2}')
+    print(f'case 1: tip(blue) = {count_case1} mid(green) = {count_case2}')
     print(f'เส้นวาสนาเชื่อมติดปลายเส้นชีวิต: เป็นผู้สร้างเนื้อสร้างตัวได้ด้วยตนเอง')
 if count_case2 > 5 and count_case1 < 1:
-    print(f'case 2 tip(blue) = {count_case1} mid(green) = {count_case2}')
+    print(f'case 2: tip(blue) = {count_case1} mid(green) = {count_case2}')
     print(f'เส้นวาสนาติดเส้นชีวิตบริเวณกลางเส้น: เป็นผู้ยอมทิ้งสิ่งที่ตนสนใจ เพื่อความสุขของผู้อื่น')
 if 0 < count_case2 <= 5 and count_case1 < 1:
-    print(f'case 3 tip(blue) = {count_case1} mid(green) = {count_case2}')
+    print(f'case 3: tip(blue) = {count_case1} mid(green) = {count_case2}')
     print(f'เส้นวาสนาเริ่มจากฐานนิ้วหัวแม่มือ: ได้รับความสนใจจากครอบครัว และคนใกล้ชิด')
 if count_case2 == 0 and count_case1 == 0:
-    print(f'case 4 tip(blue) = {count_case1} mid(green) = {count_case2}')
+    print(f'case 4: tip(blue) = {count_case1} mid(green) = {count_case2}')
     print(f'เส้นวาสนาอยู่กลางฝ่ามือ: พึ่งดวงอย่างเดียวไม่ค่อยได้ หลายครั้งต้องพึ่งตัวเองด้วย')
 # else:
 #     print(f'.')

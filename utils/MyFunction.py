@@ -75,7 +75,7 @@ def convert_to_skel(image_path):
         raise ValueError("Image not loaded. Please check the image path.")
     
     # Apply thresholding to convert to black and white
-    _, black_and_white_image = cv2.threshold(grayscale_image, 128, 255, cv2.THRESH_BINARY)
+    _, black_and_white_image = cv2.threshold(grayscale_image, 130, 255, cv2.THRESH_BINARY)
     
     binary_image = black_and_white_image // 255
     skeleton = skeletonize(binary_image)
